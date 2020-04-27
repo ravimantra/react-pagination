@@ -1,8 +1,12 @@
 {
   "name": "@ravimantra/react-pagination",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Simple react pagination",
   "main": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ravimantra/react-pagination"
+  },
   "scripts": {
     "build": "webpack"
   },
