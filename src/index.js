@@ -36,3 +36,5 @@ export const SimplePagination = ({
     </div>
   );
 }
+
+export default SimplePagination;
