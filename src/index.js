@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react'
 
 export const SimplePagination = ({
-  pageSize,
-  data,
-  getCurrentPageData
+  pageSize = 1,
+  data = [],
+  getCurrentPageData = [],
+  containerClass = '',
+  prevButton = '',
+  nextButton = '',
+  pageNumberText = ''
 }) => {
   const totalPages = Math.ceil(data.length / pageSize);
   const [currentPage, setCurrentPage] = useState(1);
@@ -29,10 +33,22 @@ export const SimplePagination = ({
   }
 
   return (
-    <div>
-      <button onClick={goToPrevious} disabled={currentPage === 1}>Prev</button>
-      <span>{currentPage} of {Math.ceil(data.length / pageSize)}</span>
-      <button onClick={goToNext} disabled={currentPage === totalPages}>Next</button>
+    <div className={containerClass}>
+      <button
+        onClick={goToPrevious}
+        disabled={currentPage === 1}
+        className={prevButton}
+      >
+        Prev
+      </button>
+      <span className={pageNumberText}>{currentPage} of {Math.ceil(data.length / pageSize)}</span>
+      <button
+        onClick={goToNext}
+        disabled={currentPage === totalPages}
+        className={nextButton}
+      >
+        Next
+      </button>
     </div>
   );
 }

@@ -9,8 +9,8 @@ const App = () => {
   }
   return (
     <SimplePagination
-      pageSize="3"
-      data={[1, 3, 6, 78, 11, 10, 8, 13]}
+      pageSize={3}
+      data={[1, 3, 6, 78, 11, 10, 8, 13, 33, 44, 11, 66, 88]}
       getCurrentPageData={getCurrentPageData}
     />
   )
